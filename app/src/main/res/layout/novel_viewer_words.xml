@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:orientation="vertical" android:weightSum="1">
+    <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout1" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:id="@+id/tvUsedTime" android:layout_height="wrap_content" android:text="TextView" android:layout_gravity="center"></TextView>
+        <Spinner android:layout_height="wrap_content" android:id="@+id/spNovelIndex" android:layout_width="match_parent"></Spinner>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/linearLayoutProgressBar" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_alignParentBottom="true">
+        <Button android:layout_width="wrap_content" android:text="Go" android:id="@+id/btnGoToIndex" android:onClick="BtnGoToIndex_OnClick" android:layout_height="40dp" android:layout_marginLeft="-3dip" android:layout_marginRight="-5dip"></Button>
+        <EditText
+            android:inputType="number"
+            android:id="@+id/etCurrentIndex"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"/>
+        <TextView android:layout_gravity="center" android:layout_height="wrap_content" android:id="@+id/tvPercent" android:layout_width="wrap_content" android:text="/100 10%"></TextView>
+        <SeekBar android:layout_height="wrap_content" android:id="@+id/sbReadProgress" android:layout_gravity="center" android:layout_width="match_parent"></SeekBar>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout3" android:layout_height="wrap_content" android:layout_above="@id/linearLayoutProgressBar">
+        <Button android:id="@+id/btnNextLine" android:onClick="BtnNextLine_OnClick" android:layout_width="fill_parent" android:layout_weight="1" android:text="@string/nextLineText" android:layout_height="match_parent">
+        </Button>
+        <Button android:id="@+id/btnPreLine" android:onClick="BtnPreLine_OnClick" android:layout_width="fill_parent" android:layout_weight="1" android:text="@string/preLineText" android:layout_height="match_parent"></Button>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linearLayout1"
+        android:layout_above="@+id/linearLayout3"
+        >
+        <oneway.NovelViewer.MyView.DivideWordsLayout android:id="@+id/llDivideWords"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            />
+        </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="oneway.NovelViewer" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".LoadingActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NovelIndexActivity"
+            android:label="小说目录" />
+        <activity
+            android:name=".NovelViewerActivity"
+            android:label="阅读" />
+        <activity
+            android:name=".NovelViewerWordsActivity"
+            android:label="切词阅读"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddWordActivity"
+            android:label="添加新词"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WordBaseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="词库" />
+        <activity
+            android:name=".NovelTextViewActivity"
+            android:label="@string/title_activity_novel_text_view" >
+        </activity>
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+    </application>
+
+</manifest>

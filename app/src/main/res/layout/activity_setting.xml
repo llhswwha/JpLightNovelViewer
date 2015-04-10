@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="oneway.NovelViewer.SettingActivity">
+
+    <TextView android:text="@string/textSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewTextSize"
+        android:layout_alignBottom="@+id/editTextTextSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextTextSize"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textViewTextSize"
+        android:layout_toEndOf="@+id/textViewTextSize" />
+
+    <TextView android:text="@string/minCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewMinCount"
+        android:layout_alignBottom="@+id/editTextMinCount"
+        android:layout_toLeftOf="@+id/editTextMinCount"
+        android:layout_toStartOf="@+id/editTextMinCount" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextMinCount"
+        android:layout_below="@+id/editTextTextSize"
+        android:layout_alignLeft="@+id/editTextTextSize"
+        android:layout_alignStart="@+id/editTextTextSize" />
+
+    <TextView android:text="@string/maxCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewMaxCount"
+        android:layout_alignBottom="@+id/editTextMaxCount"
+        android:layout_toLeftOf="@+id/editTextMaxCount"
+        android:layout_toStartOf="@+id/editTextMaxCount" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextMaxCount"
+        android:layout_below="@+id/editTextMinCount"
+        android:layout_alignLeft="@+id/editTextMinCount"
+        android:layout_alignStart="@+id/editTextMinCount" />
+
+</RelativeLayout>
